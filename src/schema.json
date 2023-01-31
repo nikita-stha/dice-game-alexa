@@ -1,0 +1,140 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "dice game test",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": [
+                      "Cancel"
+                  ]
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "WelcomeIntent",
+                  "slots": [],
+                  "samples": [
+                      "open"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "StartGameIntent",
+                  "slots": [],
+                  "samples": [
+                      "Start"
+                  ]
+              },
+              {
+                  "name": "GetPlayerNameOrExitIntent",
+                  "slots": [
+                      {
+                          "name": "answer",
+                          "type": "saveorexit"
+                      }
+                  ],
+                  "samples": [
+                      "{answer}"
+                  ]
+              },
+              {
+                  "name": "SaveHighScoreIntent",
+                  "slots": [
+                      {
+                          "name": "Name",
+                          "type": "AMAZON.FirstName"
+                      }
+                  ],
+                  "samples": [
+                      "{Name}"
+                  ]
+              },
+              {
+                  "name": "RollDiceIntent",
+                  "slots": [
+                      {
+                          "name": "gameState",
+                          "type": "response"
+                      }
+                  ],
+                  "samples": [
+                      "{gameState}"
+                  ]
+              },
+              {
+                  "name": "ReplayOrEndGameIntent",
+                  "slots": [
+                      {
+                          "name": "state",
+                          "type": "state"
+                      }
+                  ],
+                  "samples": [
+                      "{state}"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "response",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "stop game"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "continue"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "state",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "replay"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "end game"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "saveorexit",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "no"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "yes"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}
